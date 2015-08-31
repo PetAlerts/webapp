@@ -1,0 +1,16 @@
+<md-content>
+  <md-list>
+    <md-list-item class="md-3-line" ng-repeat="alert in alerts">
+      <div class="md-list-item-text">
+        <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+        <h3>Lost on {{ alert.date | date : 'longDate' }}, {{ alert.date | date : 'shortTime' }}</h3>
+        <p>
+          <strong>Species:</strong> {{ alert.species }}<br />
+          <strong>Gender: </strong> {{ alert.gender }}<br />
+          <strong>Age: </strong> {{ alert.age }}<br />
+        </p>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </md-list>
+</md-content>
